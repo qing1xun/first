@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>调查问卷</title>
+  <script>
+    function processForm()
+    {
+      let num1 = document.getElementById("a").value;
+      let num2 = document.getElementById("b").value;
+      if (isNaN(num1) || isNaN(num2)) {
+       console.error("请输入有效的数字");
+       return
+       }
+       num1 = parseFloat(num1);
+       num2= parseFloat(num2);
+        alert(num1+num2);
+    }
+  </script>
+</head>
+<body>
+  <h2>加法计算器</h2>
+    <label for="a">请输入x:</label>
+    <input type="text" id="a">
+    <br><br>
+    <label for="b">请输入y:</label>
+    <input type="text" id="b">
+    <br><br>
+    <button type="button" onclick="processForm()">提交</button>
+  </form>
+</body>
+</html>
